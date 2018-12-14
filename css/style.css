@@ -1,0 +1,32 @@
+body {
+	background: #1c2949;
+}
+#energy-div {
+    background-color: #fff;
+    padding: 15px 120px 30px 120px;
+    height: auto;
+    margin-top: 60px;
+    border-radius: 5px;
+}
+#addappliance {
+	border-radius: 4px;
+    background-color: #1c2949;
+    margin-top: 23px;
+    height: 46px;
+}
+.add-appliance {
+	font-size: 14px;
+    text-align: left;
+    color: #ffffff;
+    float: left;
+    margin-left: 40px;
+}
+.form-control {
+	height: 46px;
+}
+form {
+	margin-top: 30px;
+}
+#btn-calculate {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="Energy Consumption">
+   <meta name="author" content="Energy Consumption">
+   <title>Energy Consumption</title>
+   <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+   <link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container" id="energy-div">
+		<h2 class="text-center">Calculate energy consumption in your home</h2>
+		<form>
+		  <div class="row">
+		    <div class="col-lg-6 col-md-6">
+			  <div class="form-group">
+			    <label for="email">How many watts does the appliance consume?</label>
+			    <input type="text" class="form-control" id="watts">
+			  </div>
+			</div>
+		    <div class="col-lg-6 col-md-6">
+			  <div class="form-group">
+			    <label for="email">Number of hours of daily usage</label>
+			    <input type="text" class="form-control" id="hours">
+			  </div>
+			</div>
+		  </div>
+		  <div class="row">
+		    <div class="col-lg-6 col-md-6">
+			  <div class="form-group">
+			    <label for="email">Location of the appliance</label>
+			    <input type="text" class="form-control" id="location">
+			  </div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+			  <div class="form-group">
+			    <label for="email">Manufacturer of the aplliance</label>
+			    <input type="text" class="form-control" id="manufacturer">
+			  </div>
+			</div>
+		  </div>
+		  <div class="row">
+		    <div class="col-lg-6 col-md-6">
+			  <div class="form-group">
+			    <label for="">Cost of the appliance</label>
+			    <input type="text" class="form-control" id="cost">
+			  </div>
+			</div>
+		    <div class="col-lg-6 col-md-6">
+		      <div class="form-group">
+			    <button type="button" class="btn btn-info form-control" id="addappliance">
+	              <i class="fa fa-plus" aria-hidden="true" id="plus"></i>
+	              <span class="add-appliance">Add more appliance</span>
+	            </button>
+              </div>
+		    </div>
+		  </div>
+		  <button class="btn btn-primary" onclick="calculate()" id="btn-calculate">Calculate</button>
+		  <div class="row">
+		    <div class="col-lg-4 col-md-4">
+		      <div class="form-group">
+		      <input type="text" class="form-control" name="" id="answer" placeholder="Answer">
+		    </div>
+		  </div>
+		</form>
+	</div>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+	function calculate() {
+		var x = document.getElementById('watts').value;
+		var y = document.getElementById('hours').value;
+		var z = (x*y)/1000;
+		// document.getElementById("answer").innerHTML = z +"kwh"; 
+		document.getElementById("answer").value = z + " kwh";
+	}
+	</script>
+</body>
+</html>
